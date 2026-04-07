@@ -4,54 +4,75 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assignment 3 - Landing Page</title>
-    <link href="./output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./output.css" rel="stylesheet" />
+    <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
+    /> -->
   </head>
 
-  <body class="bg-black text-white font-sans">
+  <body class="bg-black text-white font-inter">
     <!-- ========== NAVBAR ========== -->
     <header>
-      <nav class="h-84px flex items-center">
+      <nav class="h-16 lg:h-21 relative">
+        <!-- Nav Container -->
         <div
-          class="max-w-1440px mx-auto w-full flex justify-between items-center px-4 md:px-10 lg:px-20"
+          class="max-w-360 mx-auto w-full flex items-center justify-between px-4 lg:px-35 h-full relative"
         >
           <!-- Logo -->
-          <div class="text-lg md:text-xl lg:text-2xl font-bold">Tech.</div>
+          <div class="text-2xl lg:text-4xl font-bold">Tech.</div>
 
           <!-- Menu full-->
-          <ul class="hidden md:flex gap-6 lg:gap-10">
-            <li>About</li>
-            <li>Service</li>
-            <li>Our Work</li>
-            <li>Team</li>
+          <ul class="hidden md:flex gap-2 font-normal">
+            <li class="px-4 py-2">About</li>
+            <li class="px-4 py-2">Service</li>
+            <li class="px-4 py-2">Our Work</li>
+            <li class="px-4 py-2">Team</li>
           </ul>
 
           <!-- Button full-->
+
           <a
-            class="bg-blue-700 px-4 md:px-6 py-2 rounded-full text-sm md:text-base"
-            href="mailto:wph@gmail.com"
-            >Contact</a
+            class="hidden md:flex w-40 h-11 bg-[#421ABC] text-white text-base font-semibold rounded-full items-center justify-center"
+            href="mailto:info@wph.com"
           >
+            Contact Us
+          </a>
 
-          <!-- Menu Mobile -->
-          <button id="Menu-btn" class="md:hidden text-2xl">☰</button>
-        </div>
+          <!-- Menu Mobile toggle device without js-->
+          <input type="checkbox" id="Menu-toggle" class="hidden peer" />
 
-        <!-- Mobile menu -->
-        <div
-          id="Mobile-menu"
-          class="hidden flex-col gap-4 px-6 bg-black text-white md:hidden"
-        >
-          <a href="">About</a>
-          <a href="">Service</a>
-          <a href="">Our Work</a>
-          <a href="">Team</a>
-          <a href="" class="bg-blue-700 px-6 py-2 rounded-full text-center"
-            >Contact</a
+          <!-- menu icon mobile -->
+          <label
+            for="Menu-toggle"
+            class="md:hidden text-2xl cursor-pointer z-50 select-none"
           >
+            <span class="peer-checked:hidden">☰</span>
+            <span class="hidden peer-checked:inline">✕</span>
+          </label>
+
+          <!-- Mobile menu -->
+          <div
+            class="hidden peer-checked:flex flex-col absolute top-16 left-0 w-full bg-black text-white md:hidden px-6 py-6 gap-6 z-40 border-t border-gray-800"
+          >
+            <a class="py-2 text-sm" href="">About</a>
+            <a class="py-2 text-sm" href="">Service</a>
+            <a class="py-2 text-sm" href="">Our Work</a>
+            <a class="py-2 text-sm" href="">Team</a>
+
+            <!-- Button mobile  -->
+            <a
+              class="w-91 max-w-full h-12 bg-[#421ABC] rounded-full flex items-center justify-center text-center self-center font-semibold"
+              href="mailto:info@wph.com"
+              >Contact Us</a
+            >
+          </div>
         </div>
       </nav>
     </header>
