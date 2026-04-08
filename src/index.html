@@ -19,14 +19,16 @@
 
   <body class="bg-black text-white font-inter">
     <!-- ========== NAVBAR ========== -->
-    <header>
-      <nav class="h-16 lg:h-21 relative">
+    <header class="relative z-50">
+      <nav class="h-16 lg:h-21 bg-black">
         <!-- Nav Container -->
+        <!-- To look more responsive lg:px-35 (140px) was replaced with px-[10%], round up from 9.72%   -->
         <div
-          class="max-w-360 mx-auto w-full flex items-center justify-between px-4 lg:px-35 h-full relative"
+          class="max-w-360 mx-auto w-full flex items-center justify-between px-[10%] h-full relative"
         >
           <!-- Logo -->
-          <div class="text-2xl lg:text-4xl lg:px-12 font-bold">Tech.</div>
+          <!-- lg:px-12 was replaced with px-[3.5%] -->
+          <div class="text-2xl lg:text-4xl px-[3.3%] font-bold">Tech.</div>
 
           <!-- Menu full-->
           <ul class="hidden md:flex gap-2 font-normal">
@@ -77,7 +79,10 @@
       </nav>
     </header>
     <!-- ========== HERO SECTION ========== -->
-    <section class="relative w-full overflow-hidden pt-20 lg:pt-32 lg:pl-35">
+    <!-- lg:pl-35 was replaced with pl-[10%] -->
+    <section
+      class="bg-linear-to-t-[#210A5E] relative w-full h-187.5 overflow-hidden pt-20 lg:pt-32 pl-[10%]"
+    >
       <div
         class="lg:max-w-[687px] lg:h-72 flex-1 text-left lg:text-left max-w-2xl"
       >
@@ -85,7 +90,7 @@
           Build with the <span class="italic font-bold">Future</span>.
         </h1>
         <p
-          class="text-gray-400 text-base leading-9 sm:text-xs md:text-lg lg:text-xl mb-8"
+          class="text-gray-400 text-base leading-9 sm:text-xs md:text-lg lg:text-xl lg:pr-8 mb-8"
         >
           From building sleek websites and mobile apps to integrating AI
           solutions, we help brands turn ideas into powerfull digital
@@ -100,12 +105,12 @@
       </div>
       <aside class="absolute sm:w-[306px] lg:w-[592px]">
         <div
-          class="relative lg:absolute lg:right-0 lg:top-0 w-full lg:w-auto z-10 pointer-events-none"
+          class="relative lg:absolute lg:right-0 lg:bottom-0 w-full lg:w-auto z-10 pointer-events-none"
         >
           <img
             src="../assets/images/hand.png"
             alt="hand holding mobile phone"
-            class="w-full lg:w-[595px] h-auto lg:h-[809px] object-contain object-top-right lg:-mt-64 lg:ml-150"
+            class="w-full h-auto object-contain lg:translate-y-60 lg:translate-x-100"
           />
         </div>
       </aside>
