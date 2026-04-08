@@ -57,11 +57,12 @@
           >
             <span class="peer-checked:hidden">☰</span>
             <span class="hidden peer-checked:inline">✕</span>
+            <!-- belum berhasil menggantikan icon hamburger dengan x -->
           </label>
 
           <!-- Mobile menu -->
           <div
-            class="hidden peer-checked:flex flex-col absolute top-16 left-0 w-full bg-black text-white md:hidden px-6 py-6 gap-6 z-40 border-t border-gray-800"
+            class="hidden peer-checked:flex flex-col absolute top-16 left-0 w-full h-230 bg-black text-white md:hidden px-6 py-6 gap-6 z-40 border-t border-gray-800"
           >
             <a class="py-2 text-sm" href="">About</a>
             <a class="py-2 text-sm" href="">Service</a>
@@ -79,9 +80,10 @@
       </nav>
     </header>
     <!-- ========== HERO SECTION ========== -->
+    <!-- ========= 1440 x 750 px ========= -->
     <!-- lg:pl-35 was replaced with pl-[10%] -->
     <section
-      class="bg-linear-to-t-[#210A5E] relative w-full h-187.5 overflow-hidden pt-20 lg:pt-32 pl-[10%]"
+      class="bg-linear-to-t from-[#210A5E]/30 to-transparent relative w-full h-187.5 overflow-hidden pt-20 lg:pt-32 pl-[10%]"
     >
       <div
         class="lg:max-w-[687px] lg:h-72 flex-1 text-left lg:text-left max-w-2xl"
@@ -98,7 +100,7 @@
         </p>
         <a
           href="#LetsTalk"
-          class="inline-flex items-center justify-center w-[300px] h-12 bg-[#421ABC] text-white rounded-full"
+          class="inline-flex items-center justify-center w-88.5 h-12 bg-[#421ABC] text-white rounded-full"
         >
           Let's Talk
         </a>
@@ -114,6 +116,75 @@
           />
         </div>
       </aside>
+    </section>
+
+    <!-- ========== WHO WE ARE ========= -->
+    <!-- ========== 1440 x 332 px ====== -->
+    <section
+      class="w-full h-83 items-center justify-center px-[10%] py-20 gap-8"
+    >
+      <h2 class="text-[28px] lg:text-[40px] font-bold text-center">
+        Who We Are
+      </h2>
+      <p class="text-gray-500 text-center text-[18px] lg:text-3xl">
+        We're a group of tech students trained in
+        <span class="text-white">building real-world digital products</span>.
+      </p>
+      <p class="text-gray-500 text-center text-[18px] lg:text-3xl">
+        From coding to design, we
+        <span class="text-white"
+          >craft modern solutions for modern problems</span
+        >.
+      </p>
+    </section>
+
+    <!-- ========== WHAT WE DO ======== -->
+    <section id="what" class="w-full h-194 px-[5%] lg:px-[10%] py-20 gap-16">
+      <div class="max-w-360 mx-auto">
+        <div>
+          <h1
+            class="text-[28px] lg:text-[40px] justify-center text-center font-bold"
+          >
+            What We Do
+          </h1>
+          <p
+            class="text-gray-400 justify-center text-center text-[14px] lg:text-[18px]"
+          >
+            We provide specialized technology services to help our business
+            scale and innovate.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-5">
+          <div
+            class="my-4 p-1 border border-[#181d27] rounded-xl w-[1160]gap-5 justify-center place-items-center"
+          >
+            <img src="../assets/icons/Website.png" alt="website" />
+            <div class="gap-4">
+              <h3 class="text-center text-[18px] lg:text-[20px]">
+                Web Development
+              </h3>
+              <p class="py-4 text-[#717680] text-[14px] text-center">
+                Modern websites using HTML, CSS, Javascript, and Frameworks.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="my-4 p-1 border border-[#181d27] rounded-xl w-[1160]gap-5 justify-center place-items-center"
+          >
+            <img src="../assets/icons/Website.png" alt="website" />
+            <div class="gap-4">
+              <h3 class="text-center text-[18px] lg:text-[20px]">
+                Web Development
+              </h3>
+              <p class="py-4 text-[#717680] text-[14px] text-center">
+                Modern websites using HTML, CSS, Javascript, and Frameworks.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- ========== FOOTER ========== -->
