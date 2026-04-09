@@ -3,14 +3,433 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Assignment 3 - Landing Page</title>
+    <title>Assignment 3 - Tonogw</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Font-family:INTER from Tailwind doc -->
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+
     <link href="./output.css" rel="stylesheet" />
   </head>
-  <body>
+
+  <body class="bg-black text-white font-inter">
     <!-- ========== NAVBAR ========== -->
+    <header class="relative z-50">
+      <nav class="h-16 lg:h-21 bg-black">
+        <!-- Nav Container -->
+        <div
+          class="max-w-[1440px] mx-auto w-full flex items-center justify-between px-[10%] h-full relative"
+        >
+          <!-- Logo -->
+          <div class="text-2xl lg:text-4xl px-[3.3%] font-bold">Tech.</div>
+
+          <!-- Menu full-->
+          <ul class="hidden md:flex gap-2 font-normal">
+            <li><a href="#Who" class="px-4 py-2">About</a></li>
+            <li><a href="#What" class="px-4 py-2">Service</a></li>
+            <li><a href="#Our-Work" class="px-4 py-2">Our Work</a></li>
+            <li><a href="#Team" class="px-4 py-2">Team</a></li>
+          </ul>
+
+          <!-- Button full-->
+
+          <a
+            class="hidden md:flex w-40 h-11 bg-[#421ABC] text-white text-base font-semibold rounded-full items-center justify-center"
+            href="mailto:info@wph.com"
+          >
+            Contact Us
+          </a>
+
+          <!-- Menu Mobile toggle device without js-->
+          <input type="checkbox" id="Menu-toggle" class="hidden peer" />
+
+          <!-- Hamburger -->
+          <span class="md:hidden cursor-pointer peer-checked:hidden">
+            <label class="text-2xl" for="Menu-toggle">☰</label>
+          </span>
+
+          <!-- Close (x) -->
+          <span class="hidden md:hidden peer-checked:block cursor-pointer">
+            <label class="text-2xl" for="Menu-toggle">✕</label>
+          </span>
+
+          <!-- Mobile menu -->
+          <div
+            class="hidden peer-checked:flex flex-col absolute top-16 left-0 w-full h-230 bg-black text-white md:hidden px-6 py-6 gap-6 z-40 border-t border-gray-800"
+          >
+            <a class="py-2 text-sm" href="#Hero">About</a>
+            <a class="py-2 text-sm" href="#What">Service</a>
+            <a class="py-2 text-sm" href="#Our-Team">Our Work</a>
+            <a class="py-2 text-sm" href="#Team">Team</a>
+
+            <!-- Button mobile  -->
+            <a
+              class="w-91 max-w-full h-12 bg-[#421ABC] rounded-full flex items-center justify-center text-center self-center font-semibold"
+              href="mailto:info@wph.com"
+              >Contact Us</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
 
     <!-- ========== HERO SECTION ========== -->
+    <!-- ========= 1440 x 750 px ========= -->
+    <section
+      id="Hero"
+      class="bg-linear-to-t from-[#210A5E]/30 to-transparent relative w-full h-187.5 overflow-hidden pt-20 lg:pt-36 pl-[10%]"
+    >
+      <div
+        class="lg:max-w-[687px] lg:h-72 flex-1 text-left lg:text-left max-w-2xl"
+      >
+        <h1 class="text-[40px] lg:text-[56px] font-bold leading-tight mb-6">
+          Build with the <span class="italic font-bold">Future</span>.
+        </h1>
+        <p
+          class="text-gray-400 text-base leading-9 sm:text-xs md:text-lg lg:text-xl lg:pr-8 mb-8 z-20"
+        >
+          From building sleek websites and mobile apps to integrating AI
+          solutions, we help brands turn ideas into powerfull digital
+          experiences that connect, enggage, and scale.
+        </p>
+        <a
+          href="#LetsTalk"
+          class="inline-flex items-center justify-center w-88.5 h-12 bg-[#421ABC] text-white rounded-full"
+        >
+          Let's Talk
+        </a>
+      </div>
 
+      <aside class="absolute inset-0 pointer-events-none">
+        <img
+          src="../assets/images/hand.png"
+          alt="hand holding mobile phone"
+          class="absolute bottom-0 right-[40px] sm:right-[80px] lg:right-[120px] xl:right-[160px] w-[300px] sm:w-[420px] lg:w-[550px] xl:w-[600px] object-contain z-50"
+        />
+      </aside>
+    </section>
+
+    <!-- ========== WHO WE ARE ========= -->
+    <!-- ========== 1440 x 332 px ====== -->
+    <section
+      id="Who"
+      class="w-full items-center justify-center px-[10%] py-20 gap-8"
+    >
+      <h2 class="text-[28px] lg:text-[40px] font-bold text-center">
+        Who We Are
+      </h2>
+      <p class="text-gray-500 text-center text-lg lg:text-3xl">
+        We're a group of tech students trained in
+        <span class="text-white">building real-world digital products</span>.
+      </p>
+      <p class="text-gray-500 text-center text-lg lg:text-3xl">
+        From coding to design, we
+        <span class="text-white"
+          >craft modern solutions for modern problems</span
+        >.
+      </p>
+    </section>
+
+    <!-- ========== WHAT WE DO ======== -->
+    <section id="What" class="w-full px-[5%] lg:px-[10%] py-10 gap-6">
+      <div class="max-w-[1440px] mx-auto px-5">
+        <div>
+          <!-- What We Do -->
+          <h1
+            class="text-[28px] lg:text-[40px] justify-center text-center font-bold"
+          >
+            What We Do
+          </h1>
+          <!-- What we do description -->
+          <p
+            class="text-gray-400 justify-center text-center text-sm lg:text-lg gap-5"
+          >
+            We provide specialized technology services to help our business
+            scale and innovate.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-5 py-6">
+          <!-- Web Development card -->
+          <div
+            class="my-4 p-1 border border-[#181d27] rounded-xl w-[1160]gap-5 justify-center place-items-center"
+          >
+            <img src="../assets/icons/Website.png" alt="website" />
+            <div class="gap-4">
+              <h3 class="text-center text-lg lg:text-xl pt-6">
+                Web Development
+              </h3>
+              <p class="py-4 text-[#717680] text-sm text-center">
+                Modern websites using HTML, CSS, Javascript, and Frameworks.
+              </p>
+            </div>
+          </div>
+
+          <!-- App Development -->
+          <div
+            class="my-4 p-1 border border-[#181d27] rounded-xl w-[1160]gap-5 justify-center place-items-center"
+          >
+            <img src="../assets/icons/Mobile.png" alt="website" />
+            <div class="gap-4">
+              <h3 class="text-center text-lg lg:text-xl pt-6">
+                App Development
+              </h3>
+              <p class="py-4 text-[#717680] text-sm text-center">
+                Mobile and desktop apps tailored for your needs.
+              </p>
+            </div>
+          </div>
+
+          <!-- AI Integration -->
+          <div
+            class="my-4 p-1 border border-[#181d27] rounded-xl w-[1160]gap-5 justify-center place-items-center"
+          >
+            <img src="../assets/icons/AI.png" alt="website" />
+            <div class="gap-4">
+              <h3 class="text-center text-lg lg:text-xl pt-6">
+                AI Integration
+              </h3>
+              <p class="py-4 text-[#717680] text-sm text-center">
+                Smart solutions using AI-powered tools and automation.
+              </p>
+            </div>
+          </div>
+
+          <!-- UI/UX Design -->
+          <div
+            class="my-4 p-1 border border-[#181d27] rounded-xl w-[1160]gap-5 justify-center place-items-center"
+          >
+            <img src="../assets/icons/Paint.png" alt="website" />
+            <div class="gap-4">
+              <h3 class="text-center text-lg lg:text-xl pt-6">UI/UX Design</h3>
+              <p class="py-4 text-[#717680] text-sm text-center">
+                Clean and functional designs for better user experience.
+              </p>
+            </div>
+          </div>
+
+          <!-- Landing Page Design -->
+          <div
+            class="my-4 p-1 border border-[#181d27] rounded-xl w-[1160]gap-5 justify-center place-items-center"
+          >
+            <img src="../assets/icons/Landing Page.png" alt="website" />
+            <div class="gap-4">
+              <h3 class="text-center text-lg lg:text-xl pt-6">
+                Landing Page Design
+              </h3>
+              <p class="py-4 text-[#717680] text-sm text-center">
+                Hign-converting landing pages for your product or business.
+              </p>
+            </div>
+          </div>
+
+          <!-- CMS Integration -->
+          <div
+            class="my-4 p-1 border border-[#181d27] rounded-xl w-[1160]gap-5 justify-center place-items-center"
+          >
+            <img src="../assets/icons/CMS.png" alt="website" />
+            <div class="gap-4">
+              <h3 class="text-center text-lg lg:text-xl pt-6">
+                CMS Integration
+              </h3>
+              <p class="py-4 text-[#717680] text-sm text-center">
+                Easy-to-manage websites with WordPress or Webflow.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Our Work ====== -->
+    <section id="Our-Work" class="w-full py-10">
+      <div class="max-w-[1440px] mx-auto px-[5%] lg:px-[10%]">
+        <h2
+          class="text-[28px] md:text-4xl lg:text-[40px] text-center font-bold mt-5"
+        >
+          Our Work
+        </h2>
+        <p class="text-base lg:text-lg text-[#717680] text-center pb-5">
+          See what we've built with passion and purpose
+        </p>
+        <div
+          class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 text-xl pt-5"
+        >
+          <div>
+            <img src="../assets/images/image 214 copy.png" alt="" />
+            <h3 class="text-base lg:text-xl pt-5">Portfolio 1</h3>
+          </div>
+
+          <div>
+            <img src="../assets/images/image 214.png" alt="" />
+            <h3 class="text-base lg:text-xl pt-5">Portfolio 2</h3>
+          </div>
+
+          <div>
+            <img src="../assets/images/image 214 (1).png" alt="" />
+            <h3 class="text-[16px] lg:text-xl pt-5">Portfolio 3</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== MEET THE TEAM ======= -->
+    <section id="Team" class="w-full py-10">
+      <div class="max-w-[1440px] mx-auto px-[5%] lg:px-[10%] text-center">
+        <h2 class="text-[28px] lg:text-[40px] text-center font-bold">
+          Meet the Team
+        </h2>
+        <p class="text-base lg:text-lg text-[#717680] text-center">
+          A group of future-ready tech makers.
+        </p>
+        <div
+          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-2 md:gap-8 lg:gap-10 px-5"
+        >
+          <div class="flex flex-col items-center group">
+            <div
+              class="w-full max-w-[160px] md:max-w-[200px] aspect-square rounded-full bg-black mb-4"
+            >
+              <img
+                src="../assets/images/Ellipse 7.png"
+                alt="Jasper Kim"
+                class="bg-black w-full h-full object-cover rounded-full"
+              />
+            </div>
+            <h4 class="text-base md:text-lg lg:text-xl">Jasper Kim</h4>
+            <p class="text-[#717680] text-sm lg:text-base pt-2">
+              Project Manager
+            </p>
+          </div>
+
+          <div class="flex flex-col items-center group">
+            <div
+              class="w-full max-w-[160px] md:max-w-[200px] aspect-square rounded-full bg-black mb-4"
+            >
+              <img
+                src="../assets/images/Ellipse 7 (1).png"
+                alt="Alex Jonathan"
+                class="bg-black w-full h-full object-cover rounded-full"
+              />
+            </div>
+            <h4 class="md:text-lg lg:text-xl">Alex Jonathan</h4>
+            <p class="text-[#717680] text-sm lg:text-base pt-2">
+              Full Stack Developer
+            </p>
+          </div>
+
+          <!-- ==== Mario Lopez ===== -->
+          <div class="flex flex-col items-center group">
+            <div
+              class="w-full max-w-[160px] md:max-w-[200px] aspect-square rounded-full bg-black mb-4"
+            >
+              <img
+                src="../assets/images/Ellipse 7 copy 2.png"
+                alt="Mario Lopez"
+                class="bg-black w-full h-full object-cover rounded-full"
+              />
+            </div>
+            <h4 class="text-base md:text-lg lg:text-xl">Mario Lopez</h4>
+            <p class="text-[#717680] text-[14px] lg:text-base pt-2">
+              UI/UX Designer
+            </p>
+          </div>
+
+          <!-- ====  -->
+          <div class="flex flex-col items-center group">
+            <div
+              class="w-full max-w-[160px] md:max-w-[200px] aspect-square rounded-full bg-black mb-4"
+            >
+              <img
+                src="../assets/images/Ellipse 7 copy.png"
+                alt="Jasper Kim"
+                class="bg-black w-full h-full object-cover rounded-full"
+              />
+            </div>
+            <h4 class="text-base lg:text-[20px]">Jasper Kim</h4>
+            <p class="text-[#717680] text-[14px] lg:text-base pt-2">
+              Project Manager
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Let's Collaborate ==== -->
+    <section
+      id="contact-form"
+      class="w-full py-10 px-[5%] lg:px-[10%] bg-black"
+    >
+      <div class="max-w-[1440px] mx-auto flex flex-col items-center">
+        <div class="text-center mb-10">
+          <h2 class="text-[28px] md:text-[34px] lg:text-[40px] font-bold mb-4">
+            Let's Collaborates
+          </h2>
+          <p class="text-[#717680] text-base md:text-[17px] lg:text-lg">
+            Need a tech team? We're ready to help
+          </p>
+        </div>
+
+        <!-- Form input -->
+        <form class="w-full max-w-[592px] flex flex-col gap-6" action="">
+          <!-- Name -->
+          <div class="flex flex-col gap-2">
+            <label class="text-sm md:text-sm lg:text-base">Name</label>
+
+            <input
+              type="text"
+              name="name"
+              required
+              minlength="3"
+              placeholder="Enter your name"
+              class="w-full h-12 px-4 rounded-xl border border-[#252B37] bg-black text-white placeholder-gray-500 focus:outline-none focus:ring-2-[#421ABC]"
+            />
+          </div>
+
+          <!-- Email -->
+          <div class="flex flex-col gap-2">
+            <label class="text-sm md:text-sm lg:text-base">Email</label>
+
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="Enter your email"
+              class="w-full h-12 px-4 rounded-xl border border-[#252B37] bg-black text-white placeholder-gray-500 focus:outline-none focus:ring-2-[#421ABC]"
+            />
+          </div>
+
+          <!-- Message -->
+          <div class="flex flex-col gap-2">
+            <label class="text-sm md:text-sm lg:text-base">Message</label>
+
+            <textarea
+              rows="5"
+              name="message"
+              required
+              minlength="10"
+              placeholder="Enter your message"
+              class="w-full py-3 px-4 rounded-xl border border-[#252B37] bg-black text-white placeholder-gray-500 focus:outline-none focus:ring-2-[#421ABC]"
+            ></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <button
+            type="submit"
+            class="w-full h-12 bg-[#421ABC] rounded-full font-semibold hover:opacity-90"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
     <!-- ========== FOOTER ========== -->
+    <section id="Footer">
+      <div
+        class="text-xs md:text-sm lg:text-base text-center text-[#717680] py-2"
+      >
+        <p>&copy; 2026 Web Programming Hack. All rights reserved.</p>
+      </div>
+    </section>
   </body>
 </html>
