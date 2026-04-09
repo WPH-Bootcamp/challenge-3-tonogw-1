@@ -32,10 +32,10 @@
 
           <!-- Menu full-->
           <ul class="hidden md:flex gap-2 font-normal">
-            <li class="px-4 py-2">About</li>
-            <li class="px-4 py-2">Service</li>
-            <li class="px-4 py-2">Our Work</li>
-            <li class="px-4 py-2">Team</li>
+            <li><a href="#Who" class="px-4 py-2">About</a></li>
+            <li><a href="#What" class="px-4 py-2">Service</a></li>
+            <li><a href="#Our-Work" class="px-4 py-2">Our Work</a></li>
+            <li><a href="#Team" class="px-4 py-2">Team</a></li>
           </ul>
 
           <!-- Button full-->
@@ -64,10 +64,10 @@
           <div
             class="hidden peer-checked:flex flex-col absolute top-16 left-0 w-full h-230 bg-black text-white md:hidden px-6 py-6 gap-6 z-40 border-t border-gray-800"
           >
-            <a class="py-2 text-sm" href="">About</a>
-            <a class="py-2 text-sm" href="">Service</a>
-            <a class="py-2 text-sm" href="">Our Work</a>
-            <a class="py-2 text-sm" href="">Team</a>
+            <a class="py-2 text-sm" href="#Hero">About</a>
+            <a class="py-2 text-sm" href="#What">Service</a>
+            <a class="py-2 text-sm" href="#Our-Team">Our Work</a>
+            <a class="py-2 text-sm" href="#Team">Team</a>
 
             <!-- Button mobile  -->
             <a
@@ -83,6 +83,7 @@
     <!-- ========= 1440 x 750 px ========= -->
     <!-- lg:pl-35 was replaced with pl-[10%] -->
     <section
+      id="Hero"
       class="bg-linear-to-t from-[#210A5E]/30 to-transparent relative w-full h-187.5 overflow-hidden pt-20 lg:pt-32 pl-[10%]"
     >
       <div
@@ -107,7 +108,7 @@
       </div>
       <aside class="absolute sm:w-[306px] lg:w-[592px]">
         <div
-          class="relative lg:absolute lg:right-0 lg:bottom-0 w-full lg:w-auto z-10 pointer-events-none"
+          class="relative lg:absolute lg:right-0 lg:bottom-0 w-full lg:w-auto z-10"
         >
           <img
             src="../assets/images/hand.png"
@@ -121,6 +122,7 @@
     <!-- ========== WHO WE ARE ========= -->
     <!-- ========== 1440 x 332 px ====== -->
     <section
+      id="Who"
       class="w-full h-83 items-center justify-center px-[10%] py-20 gap-8"
     >
       <h2 class="text-[28px] lg:text-[40px] font-bold text-center">
@@ -139,7 +141,7 @@
     </section>
 
     <!-- ========== WHAT WE DO ======== -->
-    <section id="what" class="w-full h-194 px-[5%] lg:px-[10%] py-20 gap-6">
+    <section id="What" class="w-full h-194 px-[5%] lg:px-[10%] py-20 gap-6">
       <div class="max-w-[1440px] mx-auto">
         <div>
           <h1
@@ -250,7 +252,7 @@
     </section>
 
     <!-- ======= Our Work ====== -->
-    <section id="Our Work" class="w-full py-16 lg:py-24">
+    <section id="Our-Work" class="w-full py-16 lg:py-24">
       <div class="max-w-360 mx-auto px-[5%] lg:px-[10%]">
         <h2 class="text-[28px] lg:text-[40px] text-center pt-10 font-bold mt-5">
           Our Work
@@ -258,7 +260,9 @@
         <p class="text-[16px] lg:text-[18px] text-[#717680] text-center pb-5">
           See what we've built with passion and purpose
         </p>
-        <div class="grid sm:grid-cols-1 lg:grid-cols-3 gap-5 text-[20px] pt-5">
+        <div
+          class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 text-[20px] pt-5"
+        >
           <div>
             <img src="../assets/images/image 214 copy.png" alt="" />
             <h3 class="text-[16px] lg:text-[20px] pt-5">Portfolio 1</h3>
@@ -278,7 +282,7 @@
     </section>
 
     <!-- ====== MEET THE TEAM ======= -->
-    <section id="Meet the Team" class="w-full py-16 lg:py-24">
+    <section id="Team" class="w-full py-16 lg:py-24">
       <div class="max-w-[1440px] mx-auto px-[5%] lg:px-[10%] text-center">
         <h2 class="text-[28px] lg:text-[40px] text-center font-bold">
           Meet the Team
@@ -358,6 +362,24 @@
       </div>
     </section>
 
+    <!-- ===== Let's Collaborate ==== -->
+    <section
+      id="contact-form"
+      class="w-full py-20 px-[5%] lg:px-[10%] bg-black"
+    >
+      <div class="max-w-[1440px] mx-auto flex flex-col items-center">
+        <div class="text-center mb-10">
+          <h2 class="text-[28px] md:text-[34px] lg:text-[40px] font-bold mb-4">
+            Let's Collaborates
+          </h2>
+          <p class="text-[#717680] text-[16px] md:text-[17px] lg:text[18px]">
+            Need a tech team? We're ready to help
+          </p>
+        </div>
+
+        <div class="form"></div>
+      </div>
+    </section>
     <!-- ========== FOOTER ========== -->
   </body>
 </html>
